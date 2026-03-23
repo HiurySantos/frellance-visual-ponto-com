@@ -324,3 +324,19 @@ window.addEventListener('keydown', (e) => {
         }, 3000);
     }
 });
+const botoes = document.querySelectorAll(".unidade-botao");
+
+botoes.forEach(botao => {
+  botao.addEventListener("click", () => {
+    const conteudo = botao.nextElementSibling;
+    const aberto = botao.classList.contains("ativo");
+
+    document.querySelectorAll(".unidade-botao").forEach(b => b.classList.remove("ativo"));
+    document.querySelectorAll(".unidade-conteudo").forEach(c => c.style.maxHeight = null);
+
+    if (!aberto) {
+      botao.classList.add("ativo");
+      conteudo.style.maxHeight = conteudo.scrollHeight + "px";
+    }
+  });
+});

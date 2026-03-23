@@ -1,11 +1,11 @@
 /* ========== VARIÁVEIS CSS ========== */
 /* EDITÁVEL: Cores principais do tema */
 :root {
-    --primary: #1e3a5f;
-    --primary-dark: #152c47;
-    --secondary: #f59e0b;
-    --secondary-dark: #d97706;
-    --accent: #3b82f6;
+    --primary: #0b7ddf;
+    --primary-dark: #096ec5;
+    --secondary: #243c96;
+    --secondary-dark: #1b2e73;
+    --accent: #0b7ddf;
     --bg: #ffffff;
     --bg-alt: #f8fafc;
     --bg-light: #f1f5f9;
@@ -283,8 +283,9 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(30, 58, 95, 0.95), rgba(30, 58, 95, 0.85));
+    background: linear-gradient(135deg, rgba(11, 125, 223, 0.95), rgba(36, 60, 150, 0.85));
 }
+
 
 .hero .container {
     position: relative;
@@ -346,7 +347,7 @@ p {
     line-height: 1;
 }
 
-.stat-number + span {
+.stat-number+span {
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--secondary);
@@ -394,6 +395,7 @@ p {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -405,6 +407,7 @@ p {
         opacity: 0;
         transform: translateX(30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -412,9 +415,12 @@ p {
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-10px);
     }
@@ -1011,24 +1017,24 @@ p {
     z-index: 10;
 }
 
-   .mapa-placeholder {
-        width: 100%;
-        height: 100%;
-        min-height: 300px;
-        background: var(--bg-alt);
-        border-radius: var(--radius);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: var(--transition);
-        border: 2px dashed var(--text-light);
-    }
+.mapa-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    background: var(--bg-alt);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px dashed var(--text-light);
+}
 
-    .mapa-placeholder:hover {
-        border-color: var(--primary);
-    }
+.mapa-placeholder:hover {
+    border-color: var(--primary);
+}
 
 
 /* ========== RESPONSIVE ========== */
@@ -1082,7 +1088,7 @@ p {
     .contato-content {
         grid-template-columns: 1fr;
     }
-    
+
 
     .footer-content {
         grid-template-columns: repeat(2, 1fr);
@@ -1202,7 +1208,7 @@ p {
         font-size: 2rem;
     }
 
-    .stat-number + span {
+    .stat-number+span {
         font-size: 2rem;
     }
 
@@ -1231,4 +1237,99 @@ p {
         padding: 12px 24px;
         font-size: 0.95rem;
     }
+}
+
+.unidades {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.unidades-titulo {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.unidades-descricao {
+    margin-bottom: 30px;
+}
+
+.unidades-lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.unidade-botao {
+    background: #0078d7;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 15px 40px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.unidade-botao.ativo {
+    background: white;
+    color: #0078d7;
+    border: 2px solid #0078d7;
+}
+
+.unidade-conteudo {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+    width: 100%;
+    max-width: 700px;
+}
+
+.unidade-card {
+  background: linear-gradient(135deg, #0b7ddf, #243c96);
+  color: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  margin-top: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.unidade-card h3 {
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.unidade-card p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+}
+
+.unidade-card strong {
+  color: #ffffff;
+}
+
+.unidade-card iframe {
+    width: 100%;
+    height: 220px;
+    margin-top: 15px;
+    border-radius: 12px;
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+.botao-whatsapp {
+    display: inline-block;
+    margin-top: 15px;
+    background: #25d366;
+    padding: 12px 25px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.botao-whatsapp:hover {
+    background: #1ebe5d;
+    transform: scale(1.05);
 }
