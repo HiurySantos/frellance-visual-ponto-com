@@ -177,7 +177,7 @@ const animatedElements = document.querySelectorAll(`
     .destaque-card,
     .beneficio-card,
     .depoimento-card,
-    .galeria-item,
+    .polo-card,
     .sobre-content > *,
     .info-item
 `);
@@ -339,4 +339,64 @@ botoes.forEach(botao => {
       conteudo.style.maxHeight = conteudo.scrollHeight + "px";
     }
   });
+});
+
+// ========== CARROSSEL DA GALERIA DOS POLOS ==========
+const carousels = document.querySelectorAll("[data-carousel]");
+
+carousels.forEach((carousel) => {
+    const items = carousel.querySelectorAll(".media-item");
+    const prevBtn = carousel.querySelector('[data-carousel-btn="prev"]');
+    const nextBtn = carousel.querySelector('[data-carousel-btn="next"]');
+    const track = carousel.querySelector(".carousel-track");
+
+    let currentIndex = 0;
+    let startX = 0;
+    let endX = 0;
+
+    function showItem(index) {
+        items.forEach((item) => {
+            item.classList.remove("active");
+
+            const video = item.querySelector("video");
+            if (video) {
+                video.pause();
+                video.currentTime = 0;
+            }
+        });
+
+        items[index].classList.add("active");
+    }
+
+    nextBtn.addEventListener("click", () => {
+        currentIndex++;
+        if (currentIndex >= items.length) {
+            currentIndex = 0;
+        }
+        showItem(currentIndex);
+    });
+
+    prevBtn.addEventListener("click", () => {
+        currentIndex--;
+        if (currentIndex < 0) {
+            currentIndex = items.length - 1;
+        }
+        showItem(currentIndex);
+    });
+
+    track.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    track.addEventListener("touchend", (e) => {
+        endX = e.changedTouches[0].clientX;
+
+        if (startX - endX > 50) {
+            nextBtn.click();
+        }
+
+        if (endX - startX > 50) {
+            prevBtn.click();
+        }
+    });
 });
