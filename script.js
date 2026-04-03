@@ -400,3 +400,39 @@ carousels.forEach((carousel) => {
         }
     });
 });
+
+document.querySelectorAll('[data-carousel]').forEach(carousel => {
+    const items = carousel.querySelectorAll('.media-item');
+
+    function updateCarousel(activeIndex) {
+        items.forEach((item, index) => {
+            item.classList.toggle('active', index === activeIndex);
+
+            const video = item.querySelector('video');
+
+            if (video) {
+                if (index === activeIndex) {
+                    video.play().catch(() => {});
+                } else {
+                    video.pause();
+                    video.currentTime = 0;
+                }
+            }
+        });
+    }
+
+    let currentIndex = 0;
+
+    // IMPORTANTE: inicia o primeiro corretamente
+    updateCarousel(currentIndex);
+
+    carousel.querySelector('[data-carousel-btn="next"]').onclick = () => {
+        currentIndex = (currentIndex + 1) % items.length;
+        updateCarousel(currentIndex);
+    };
+
+    carousel.querySelector('[data-carousel-btn="prev"]').onclick = () => {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        updateCarousel(currentIndex);
+    };
+});
