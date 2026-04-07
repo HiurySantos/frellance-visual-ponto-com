@@ -490,6 +490,79 @@ p {
     margin: 0;
 }
 
+/* ========== POLO EAD ========== */
+.polo-ead {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8fafc, #eef4ff);
+}
+
+.polo-ead-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.polo-ead-image {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: var(--shadow-lg);
+}
+
+.polo-ead-image img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 16px;
+}
+
+.polo-ead-info h2 {
+    margin-bottom: 1rem;
+    color: var(--secondary);
+}
+
+.polo-ead-info p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.polo-ead-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.polo-ead-topicos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 25px 0 30px;
+}
+
+.polo-ead-topicos .topico {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 14px 16px;
+    box-shadow: var(--shadow);
+    font-weight: 600;
+    color: var(--text);
+}
+
+.polo-ead-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
 /* ========== GALERIA ========== */
 /* ========== GALERIA DOS POLOS ========== */
 .galeria {
@@ -658,6 +731,50 @@ p {
     border-radius: var(--radius-sm);
     font-weight: 600;
     font-size: 0.9rem;
+}
+/* ========== EMPREGUE JÁ ========== */
+.empregue-ja {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #0b7ddf, #243c96);
+    color: white;
+}
+
+.empregue-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.empregue-info h2 {
+    color: white;
+}
+
+.empregue-info p {
+    color: rgba(255,255,255,0.9);
+}
+
+.empregue-badge {
+    background: white;
+    color: #243c96;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.empregue-topicos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.empregue-image img {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
 }
 
 /* ========== DIFERENCIAIS ========== */
@@ -1164,6 +1281,25 @@ p {
     .polos-grid {
         grid-template-columns: 1fr;
     }
+   
+    .polo-ead-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .polo-ead-image {
+        text-align: center;
+    }
+
+    .empregue-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .empregue-image {
+        text-align: center;
+    }
+
 }
 
 /* Mobile */
@@ -1272,7 +1408,61 @@ p {
         height: 44px;
         font-size: 22px;
     }
+   
+    .polo-ead {
+        padding: 60px 0;
+    }
+
+    .polo-ead-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .polo-ead-image {
+        order: -1;
+    }
+
+    .polo-ead-info h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .polo-ead-info p {
+        text-align: center;
+        font-size: 0.95rem;
+    }
+
+    .polo-ead-badge {
+        display: table;
+        margin: 0 auto 1rem;
+    }
+
+    .polo-ead-topicos {
+        grid-template-columns: 1fr;
+    }
+
+    .polo-ead-buttons {
+        flex-direction: column;
+    }
+
+    .polo-ead-buttons .btn {
+        width: 100%;
+    }
+
+     .empregue-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .empregue-topicos {
+        grid-template-columns: 1fr;
+    }
+
+    .empregue-image {
+        order: -1;
+    }
 }
+
 
 /* Small mobile */
 @media (max-width: 480px) {
@@ -1349,7 +1539,62 @@ p {
     height: 40px;
     font-size: 20px;
 }
+
+    
+    .polo-ead {
+        padding: 40px 0;
+    }
+
+    .polo-ead-info h2 {
+        font-size: 1.3rem;
+    }
+
+    .polo-ead-info p {
+        font-size: 0.9rem;
+    }
+
+    .polo-ead-image img {
+        max-width: 260px;
+    }
+
+    .polo-ead-topicos .topico {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+
+    .polo-ead-buttons .btn {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    .empregue-ja {
+        padding: 40px 0;
+    }
+
+    .empregue-info h2 {
+        font-size: 1.3rem;
+    }
+
+    .empregue-info p {
+        font-size: 0.9rem;
+    }
+
+    .empregue-image img {
+        max-width: 260px;
+    }
+
+    .empregue-topicos div {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .empregue-ja .btn {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
 }
+
+
 
 .unidades {
     text-align: center;
