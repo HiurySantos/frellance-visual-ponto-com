@@ -341,98 +341,42 @@ botoes.forEach(botao => {
   });
 });
 
-// ========== CARROSSEL DA GALERIA DOS POLOS ==========
-const carousels = document.querySelectorAll("[data-carousel]");
+// ========== MINI GALERIA DOS POLOS NA HOME ==========
+const galeriasHome = {
+    guarapari: [
+        "img/Polo Guarapari/WhatsApp Image 2026-04-02 at 04.50.40.jpeg",
+        "img/Polo Guarapari/WhatsApp Image 2026-04-02 at 04.48.48 (1).jpeg"
+    ],
 
-carousels.forEach((carousel) => {
-    const items = carousel.querySelectorAll(".media-item");
-    const prevBtn = carousel.querySelector('[data-carousel-btn="prev"]');
-    const nextBtn = carousel.querySelector('[data-carousel-btn="next"]');
-    const track = carousel.querySelector(".carousel-track");
+    serra: [
+        "img/Polo Serra/WhatsApp Image 2026-04-02 at 04.59.17.jpeg",
+        "img/Polo Serra/WhatsApp Image 2026-04-02 at 05.34.48.jpeg"
+    ],
 
-    let currentIndex = 0;
-    let startX = 0;
-    let endX = 0;
+    cariacica: [
+        "img/Polo Cariacica/WhatsApp Image 2026-04-02 at 05.29.50.jpeg",
+        "img/Polo Cariacica/WhatsApp Image 2026-04-02 at 05.12.08.jpeg"
+    ],
 
-    function showItem(index) {
-        items.forEach((item) => {
-            item.classList.remove("active");
+    vilavelha: [
+        "img/Polo Vila Velha/WhatsApp Image 2026-04-07 at 11.47.12.jpeg",
+        "img/Polo Vila Velha/WhatsApp Image 2026-04-07 at 11.47.121.jpeg"
+    ]
+};
 
-            const video = item.querySelector("video");
-            if (video) {
-                video.pause();
-                video.currentTime = 0;
-            }
-        });
+function carregarMiniGaleria(id, fotos) {
+    const container = document.getElementById(id);
 
-        items[index].classList.add("active");
-    }
+    if (!container) return;
 
-    nextBtn.addEventListener("click", () => {
-        currentIndex++;
-        if (currentIndex >= items.length) {
-            currentIndex = 0;
-        }
-        showItem(currentIndex);
+    fotos.forEach((foto, index) => {
+        container.innerHTML += `
+            <img src="${foto}" alt="Foto ${index + 1}" loading="lazy">
+        `;
     });
+}
 
-    prevBtn.addEventListener("click", () => {
-        currentIndex--;
-        if (currentIndex < 0) {
-            currentIndex = items.length - 1;
-        }
-        showItem(currentIndex);
-    });
-
-    track.addEventListener("touchstart", (e) => {
-        startX = e.touches[0].clientX;
-    });
-
-    track.addEventListener("touchend", (e) => {
-        endX = e.changedTouches[0].clientX;
-
-        if (startX - endX > 50) {
-            nextBtn.click();
-        }
-
-        if (endX - startX > 50) {
-            prevBtn.click();
-        }
-    });
-});
-
-document.querySelectorAll('[data-carousel]').forEach(carousel => {
-    const items = carousel.querySelectorAll('.media-item');
-
-    function updateCarousel(activeIndex) {
-        items.forEach((item, index) => {
-            item.classList.toggle('active', index === activeIndex);
-
-            const video = item.querySelector('video');
-
-            if (video) {
-                if (index === activeIndex) {
-                    video.play().catch(() => {});
-                } else {
-                    video.pause();
-                    video.currentTime = 0;
-                }
-            }
-        });
-    }
-
-    let currentIndex = 0;
-
-    // IMPORTANTE: inicia o primeiro corretamente
-    updateCarousel(currentIndex);
-
-    carousel.querySelector('[data-carousel-btn="next"]').onclick = () => {
-        currentIndex = (currentIndex + 1) % items.length;
-        updateCarousel(currentIndex);
-    };
-
-    carousel.querySelector('[data-carousel-btn="prev"]').onclick = () => {
-        currentIndex = (currentIndex - 1 + items.length) % items.length;
-        updateCarousel(currentIndex);
-    };
-});
+carregarMiniGaleria("galeria-guarapari", galeriasHome.guarapari);
+carregarMiniGaleria("galeria-serra", galeriasHome.serra);
+carregarMiniGaleria("galeria-cariacica", galeriasHome.cariacica);
+carregarMiniGaleria("galeria-vilavelha", galeriasHome.vilavelha);

@@ -563,7 +563,6 @@ p {
     flex-wrap: wrap;
 }
 
-/* ========== GALERIA ========== */
 /* ========== GALERIA DOS POLOS ========== */
 .galeria {
     padding: 100px 0;
@@ -595,77 +594,37 @@ p {
     margin-bottom: 15px;
 }
 
-.carousel {
-    position: relative;
-    overflow: hidden;
-    border-radius: 14px;
+.mini-galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 10px;
 }
 
-.carousel-track {
-    position: relative;
+.mini-galeria img {
     width: 100%;
-    height: 260px;
-}
-
-.media-item {
-    position: relative;
-    display: none;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 14px;
-}
-
-.media-item.active {
-    display: block;
-}
-
-
-.carousel-item {
-    width: 100%;
-    height: 100%;
+    height: 140px;
     object-fit: cover;
-    border-radius: 14px;
+    border-radius: 12px;
     display: block;
-    background: #000;
 }
 
-.logo-overlay {
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
-    width: 46px;
-    opacity: 0.85;
-    pointer-events: none;
-}
-
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 5;
-    width: 42px;
-    height: 42px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    background: rgba(0, 0, 0, 0.45);
-    color: #fff;
-    font-size: 22px;
+.btn-ver-mais {
+    display: inline-block;
+    margin-top: 15px;
+    background: var(--primary);
+    color: var(--white);
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
     transition: var(--transition);
 }
 
-.carousel-btn:hover {
-    background: rgba(0, 0, 0, 0.75);
+.btn-ver-mais:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
 }
 
-.carousel-btn.prev {
-    left: 10px;
-}
-
-.carousel-btn.next {
-    right: 10px;
-}
 
 /* ========== SERVIÇOS / CURSOS ========== */
 .servicos {
@@ -732,6 +691,7 @@ p {
     font-weight: 600;
     font-size: 0.9rem;
 }
+
 /* ========== EMPREGUE JÁ ========== */
 .empregue-ja {
     padding: 100px 0;
@@ -751,7 +711,7 @@ p {
 }
 
 .empregue-info p {
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .empregue-badge {
@@ -1281,7 +1241,7 @@ p {
     .polos-grid {
         grid-template-columns: 1fr;
     }
-   
+
     .polo-ead-content {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -1391,24 +1351,10 @@ p {
         padding: 16px;
     }
 
-    .carousel-track {
-        min-height: 220px;
+    .mini-galeria img {
+        height: 120px;
     }
 
-    .carousel-item {
-        height: 220px;
-    }
-
-    .logo-overlay {
-        width: 40px;
-    }
-
-    .carousel-btn {
-        width: 44px;
-        height: 44px;
-        font-size: 22px;
-    }
-   
     .polo-ead {
         padding: 60px 0;
     }
@@ -1449,7 +1395,7 @@ p {
         width: 100%;
     }
 
-     .empregue-content {
+    .empregue-content {
         grid-template-columns: 1fr;
         text-align: center;
     }
@@ -1520,27 +1466,12 @@ p {
         padding: 12px 24px;
         font-size: 0.95rem;
     }
-    .carousel-track {
-    min-height: 200px;
-}
 
-.carousel-item {
-    height: 200px;
-}
+    .mini-galeria img {
+        height: 110px;
+    }
 
-.logo-overlay {
-    width: 36px;
-    bottom: 6px;
-    right: 6px;
-}
 
-.carousel-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-}
-
-    
     .polo-ead {
         padding: 40px 0;
     }
