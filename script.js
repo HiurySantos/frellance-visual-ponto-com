@@ -261,7 +261,6 @@ cards.forEach(card => {
 // ========== CONSOLE INFO ==========
 console.log('%c🎓 Visual Ponto Com - Cursos Profissionalizantes', 'color: #1e3a5f; font-size: 20px; font-weight: bold;');
 console.log('%cDesenvolvido com dedicação para transformar vidas através dos idiomas', 'color: #f59e0b; font-size: 14px;');
-console.log('%cVisite-nos: Av. Paulista, 1234 - São Paulo/SP', 'color: #64748b; font-size: 12px;');
 
 // ========== SERVICE WORKER (OPCIONAL - PWA) ==========
 // Descomente para adicionar suporte PWA
@@ -380,3 +379,23 @@ carregarMiniGaleria("galeria-guarapari", galeriasHome.guarapari);
 carregarMiniGaleria("galeria-serra", galeriasHome.serra);
 carregarMiniGaleria("galeria-cariacica", galeriasHome.cariacica);
 carregarMiniGaleria("galeria-vilavelha", galeriasHome.vilavelha);
+
+// Rastrear clique no WhatsApp
+document.addEventListener('DOMContentLoaded', function () {
+    const whatsappButtons = document.querySelectorAll('.botao-whatsapp');
+
+    whatsappButtons.forEach((botao) => {
+        botao.addEventListener('click', function () {
+            if (typeof gtag === 'function') {
+                gtag('event', 'click_whatsapp', {
+                    event_category: 'contato',
+                    event_label: this.href,
+                    transport_type: 'beacon'
+                });
+                console.log('Evento WhatsApp enviado:', this.href);
+            } else {
+                console.log('gtag não carregado');
+            }
+        });
+    });
+});
