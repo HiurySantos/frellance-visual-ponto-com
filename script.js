@@ -259,7 +259,7 @@ cards.forEach(card => {
 // gtag('config', 'GA_MEASUREMENT_ID');
 
 // ========== CONSOLE INFO ==========
-console.log('%c🌍 Global Languages - Escola de Idiomas', 'color: #1e3a5f; font-size: 20px; font-weight: bold;');
+console.log('%c🎓 Visual Ponto Com - Cursos Profissionalizantes', 'color: #1e3a5f; font-size: 20px; font-weight: bold;');
 console.log('%cDesenvolvido com dedicação para transformar vidas através dos idiomas', 'color: #f59e0b; font-size: 14px;');
 console.log('%cVisite-nos: Av. Paulista, 1234 - São Paulo/SP', 'color: #64748b; font-size: 12px;');
 
