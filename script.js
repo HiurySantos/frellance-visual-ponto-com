@@ -315,7 +315,7 @@ window.addEventListener('keydown', (e) => {
 
     if (konamiCode.join(',') === konamiPattern.join(',')) {
         console.log('%c🎉 Você encontrou o Easter Egg!', 'color: #f59e0b; font-size: 24px; font-weight: bold;');
-        console.log('%c🌍 Continue explorando e aprendendo idiomas!', 'color: #1e3a5f; font-size: 16px;');
+        console.log('%c🌍 Continue explorando e aprendendo !', 'color: #1e3a5f; font-size: 16px;');
 
         // Adicionar confetti ou algum efeito visual
         document.body.style.animation = 'rainbow 2s infinite';
