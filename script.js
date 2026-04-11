@@ -382,17 +382,23 @@ carregarMiniGaleria("galeria-vilavelha", galeriasHome.vilavelha);
 
 // Rastrear clique no WhatsApp
 document.addEventListener('DOMContentLoaded', function () {
-    const whatsappButtons = document.querySelectorAll('.botao-whatsapp');
+    const botoesWhatsapp = document.querySelectorAll('.botao-whatsapp');
 
-    whatsappButtons.forEach((botao) => {
+    botoesWhatsapp.forEach((botao) => {
         botao.addEventListener('click', function () {
+            const unidade = this.dataset.unidade || 'nao_informada';
+            const link = this.href;
+
             if (typeof gtag === 'function') {
                 gtag('event', 'click_whatsapp', {
                     event_category: 'contato',
-                    event_label: this.href,
+                    event_label: unidade,
+                    unidade: unidade,
+                    link_destino: link,
                     transport_type: 'beacon'
                 });
-                console.log('Evento WhatsApp enviado:', this.href);
+
+                console.log('Evento WhatsApp enviado:', unidade, link);
             } else {
                 console.log('gtag não carregado');
             }
