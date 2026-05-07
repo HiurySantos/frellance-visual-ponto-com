@@ -1627,23 +1627,24 @@ p {
     color: #05185e;
 }
 
-/* Media Query para mobile */
-@media (max-width: 768px) {
+.links-container {
+    display: none; /* Oculto por padrão (desktop) */
+}
+
+
     .links-container {
-        display: flex;
-        flex-direction: row; /* Mantém lado a lado */
+        display: flex; /* Exibe no mobile */
+        flex-direction: row; /* Lado a lado */
         justify-content: center;
-        gap: 20px; /* Espaçamento entre links */
-        flex-wrap: nowrap; /* Não quebra para outra linha */
+        gap: 20px;
     }
 
     .links-container a {
-        font-weight: bold; /* Deixa os links em negrito */
-        font-size: 1.1rem; /* Um tamanho de fonte legal */
-        color: #131516; /* Cor dos links */
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: #11161a;
     }
-
     .links-container a:hover {
-        color: #243c96; /* Cor ao passar o mouse */
+        color: #f3f6f8;
+        text-decoration: underline;
     }
-}
