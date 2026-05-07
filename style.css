@@ -1626,3 +1626,24 @@ p {
 .titulo {
     color: #05185e;
 }
+
+/* Media Query para mobile */
+@media (max-width: 768px) {
+    .links-container {
+        display: flex;
+        flex-direction: row; /* Mantém lado a lado */
+        justify-content: center;
+        gap: 20px; /* Espaçamento entre links */
+        flex-wrap: nowrap; /* Não quebra para outra linha */
+    }
+
+    .links-container a {
+        font-weight: bold; /* Deixa os links em negrito */
+        font-size: 1.1rem; /* Um tamanho de fonte legal */
+        color: #131516; /* Cor dos links */
+    }
+
+    .links-container a:hover {
+        color: #243c96; /* Cor ao passar o mouse */
+    }
+}
