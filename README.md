@@ -78,6 +78,7 @@ Além disso, o projeto conta com integração com Google Analytics para monitora
  ├── style.css
  ├── script.js
  ├── galeria.html
+ ├── galeria.css
  ├── /img
  └── /assets
 ```
