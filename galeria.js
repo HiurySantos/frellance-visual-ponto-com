@@ -56,22 +56,8 @@ const galeriasCompletas = {
         { tipo: "video", src: "img/Polo Cariacica/WhatsApp Video 2026-04-02 at 05.12.07.mp4" },
         { tipo: "video", src: "img/Polo Cariacica/WhatsApp Video 2026-04-02 at 05.32.17 (1).mp4" },
         { tipo: "video", src: "img/Polo Cariacica/WhatsApp Video 2026-04-02 at 05.32.19 (2).mp4" }
-    ],
-
-    vilavelha: [
-        { tipo: "img", src: "img/Polo Vila Velha/WhatsApp Image 2026-04-07 at 11.47.12.jpeg" },
-        { tipo: "img", src: "img/Polo Vila Velha/WhatsApp Image 2026-04-07 at 20.05.51 (1).jpeg" },
-        { tipo: "img", src: "img/Polo Vila Velha/WhatsApp Image 2026-04-07 at 20.05.51 (2).jpeg" },
-        { tipo: "img", src: "img/Polo Vila Velha/WhatsApp Image 2026-04-07 at 20.05.51 (3).jpeg" },
-        { tipo: "img", src: "img/Polo Vila Velha/WhatsApp Image 2026-04-07 at 20.05.51 (4).jpeg" },
-        { tipo: "img", src: "img/Polo Vila Velha/WhatsApp Image 2026-04-07 at 20.05.51.jpeg" },
-        { tipo: "img", src: "img/Polo Vila Velha/WhatsApp Image 2026-04-07 at 20.05.52 (1).jpeg" },
-        { tipo: "img", src: "img/Polo Vila Velha/WhatsApp Image 2026-04-07 at 20.05.52 (2).jpeg" },
-        { tipo: "img", src: "img/Polo Vila Velha/WhatsApp Image 2026-04-07 at 20.05.52.jpeg" },
-        { tipo: "video", src: "img/Polo Vila Velha/WhatsApp Video 2026-04-07 at 20.05.52.mp4" },
-        { tipo: "img", src: "img/Polo Vila Velha/WhatsApp Image 2026-04-07 at 11.47.121.jpeg" }
     ]
-};
+    };
 
 function renderizarGaleria(idContainer, midias) {
     const container = document.getElementById(idContainer);
