@@ -1,0 +1,6 @@
+# Arquivos gerados pelo sistema operacional
+.DS_Store
+Thumbs.db
+
+# Logs locais
+*.log
