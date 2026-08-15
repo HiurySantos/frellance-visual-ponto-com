@@ -28,14 +28,15 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#conteudo-principal">Ir para o conteúdo principal</a>
     <!-- ========== HEADER ========== -->
     <header class="header" id="header">
         <div class="container">
             <nav class="nav">
                 <!-- EDITÁVEL: Nome do negócio/logo -->
-                <a href="#inicio" class="logo"> <img class="logo-header" src="img/Logo visual ponto com.png"></a>
+                <a href="#inicio" class="logo" aria-label="Visual Ponto Com - início"> <img class="logo-header" src="img/Logo visual ponto com.png" alt="Visual Ponto Com"></a>
 
-                <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+                <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-controls="navMenu" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -56,6 +57,7 @@
         </div>
     </header>
 
+    <main id="conteudo-principal" tabindex="-1">
 
     <!-- ========== HERO ========== -->
     <!-- Hero com imagem de fundo em tela cheia -->
@@ -130,7 +132,7 @@
                 <!-- Imagem da escola/professores -->
                 <div class="sobre-image">
                     <!-- EDITÁVEL: Imagem do estabelecimento ou equipe -->
-                    <img src="img/Sobre.jpeg" alt="Professores e alunos na Global Languages">
+                    <img src="img/Sobre.jpeg" alt="Ambiente da Visual Ponto Com" loading="lazy">
                 </div>
                 <div class="sobre-info">
                     <div class="sobre-text">
@@ -175,7 +177,7 @@
         <div class="container">
             <div class="polo-ead-content">
                 <div class="polo-ead-image">
-                    <img src="img/Unimar.jpg" alt="Polo de Universidade EAD e Semipresencial">
+                    <img src="img/Unimar.jpg" alt="Polo de Universidade EAD e Semipresencial" loading="lazy">
                 </div>
 
                 <div class="polo-ead-info">
@@ -260,7 +262,7 @@
                 <div class="servico-card">
                     <div class="servico-image">
                         <!-- EDITÁVEL: Imagem do curso -->
-                        <img src="img/Informatica Proficional.png" alt="Curso de Informática Profissional">
+                        <img src="img/Informatica Proficional.png" alt="Curso de Informática Profissional" loading="lazy">
                     </div>
                     <div class="servico-content">
                         <h3>Informática Profissional</h3>
@@ -271,7 +273,7 @@
                 </div>
                 <div class="servico-card">
                     <div class="servico-image">
-                        <img src="img/Pacote office.png" alt="Curso do Pacote Office">
+                        <img src="img/Pacote office.png" alt="Curso do Pacote Office" loading="lazy">
                     </div>
                     <div class="servico-content">
                         <h3>Pacote Office (Word, Excel e PowerPoint)</h3>
@@ -282,7 +284,7 @@
                 </div>
                 <div class="servico-card">
                     <div class="servico-image">
-                        <img src="img/designer grafico.png" alt="Curso de Edição de Vídeo">
+                        <img src="img/designer grafico.png" alt="Curso de Designer Gráfico" loading="lazy">
                     </div>
                     <div class="servico-content">
                         <h3>Designer Gráfico</h3>
@@ -294,7 +296,7 @@
 
                 <div class="servico-card">
                     <div class="servico-image">
-                        <img src="img/Desenvolvedor de aplicativos.png" alt="Curso de Desenvolvimento de Apps">
+                        <img src="img/Desenvolvedor de aplicativos.png" alt="Curso de Desenvolvimento de Apps" loading="lazy">
                     </div>
                     <div class="servico-content">
                         <h3>Desenvolvimento de Apps</h3>
@@ -304,7 +306,7 @@
                 </div>
                 <div class="servico-card">
                     <div class="servico-image">
-                        <img src="img/Programador completo.png" alt="Curso de Programador">
+                        <img src="img/Programador completo.png" alt="Curso de Programador" loading="lazy">
                     </div>
                     <div class="servico-content">
                         <h3>Programador Completo</h3>
@@ -314,7 +316,7 @@
                 </div>
                 <div class="servico-card">
                     <div class="servico-image">
-                        <img src="img/Gestao empresarial.png" alt="Curso de Gestão Empresarial">
+                        <img src="img/Gestao empresarial.png" alt="Curso de Gestão Empresarial" loading="lazy">
                     </div>
                     <div class="servico-content">
                         <h3>Gestão Empresarial</h3>
@@ -324,7 +326,7 @@
                 </div>
                 <div class="servico-card">
                     <div class="servico-image">
-                        <img src="img/Programador de games.png" alt="Curso de Games">
+                        <img src="img/Programador de games.png" alt="Curso de Games" loading="lazy">
                     </div>
                     <div class="servico-content">
                         <h3>Desenvolvimento de Games</h3>
@@ -334,7 +336,7 @@
                 </div>
                 <div class="servico-card">
                     <div class="servico-image">
-                        <img src="img/IA.png" alt="Curso de Inteligência Artificial">
+                        <img src="img/IA.png" alt="Curso de Inteligência Artificial" loading="lazy">
                     </div>
                     <div class="servico-content">
                         <h3>Inteligência Artificial</h3>
@@ -382,7 +384,7 @@
                 </div>
 
                 <div class="empregue-image">
-                    <img src="img/empregue ja.jpeg" alt="Programa Empregue Já">
+                    <img src="img/empregue ja.jpeg" alt="Programa Empregue Já" loading="lazy">
                 </div>
 
             </div>
@@ -509,10 +511,10 @@
                         <div class="avatar-image">
                             <!-- EDITÁVEL: Foto do aluno -->
                             <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80"
-                                alt="Juliana Costa">
+                                alt="" loading="lazy">
                         </div>
                         <div class="depoimento-info">
-                            <h4>Elaine Silva Coeho</h4>
+                            <h3>Elaine Silva Coeho</h3>
                             <span></span>
                         </div>
                     </div>
@@ -525,10 +527,10 @@
                     <div class="depoimento-header">
                         <div class="avatar-image">
                             <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80"
-                                alt="Roberto Silva">
+                                alt="" loading="lazy">
                         </div>
                         <div class="depoimento-info">
-                            <h4>EMANUEL</h4>
+                            <h3>EMANUEL</h3>
                             <span></span>
                         </div>
                     </div>
@@ -541,10 +543,10 @@
                     <div class="depoimento-header">
                         <div class="avatar-image">
                             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80"
-                                alt="André Santos">
+                                alt="" loading="lazy">
                         </div>
                         <div class="depoimento-info">
-                            <h4>Davi</h4>
+                            <h3>Davi</h3>
                             <span></span>
                         </div>
                     </div>
@@ -565,13 +567,12 @@
             </div>
             <div class="faq-list">
                 <!-- EDITÁVEL: Perguntas e respostas -->
-                <div class="faq-list">
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" id="faq-pergunta-1" aria-expanded="false" aria-controls="faq-resposta-1">
                             Qual a duração dos cursos?
                             <span class="faq-icon">+</span>
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer" id="faq-resposta-1" role="region" aria-labelledby="faq-pergunta-1" aria-hidden="true">
                             <p>
                                 Nossos cursos possuem durações variadas, de acordo com a área escolhida e o nível de
                                 aprendizado.
@@ -584,11 +585,11 @@
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" id="faq-pergunta-2" aria-expanded="false" aria-controls="faq-resposta-2">
                             Preciso ter conhecimento prévio?
                             <span class="faq-icon">+</span>
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer" id="faq-resposta-2" role="region" aria-labelledby="faq-pergunta-2" aria-hidden="true">
                             <p>
                                 Não. Nossos cursos são preparados para atender desde iniciantes até alunos mais
                                 avançados.
@@ -598,11 +599,11 @@
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" id="faq-pergunta-3" aria-expanded="false" aria-controls="faq-resposta-3">
                             Os cursos ajudam a conseguir emprego?
                             <span class="faq-icon">+</span>
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer" id="faq-resposta-3" role="region" aria-labelledby="faq-pergunta-3" aria-hidden="true">
                             <p>
                                 Sim. Nossos cursos são voltados para a prática e para as necessidades do mercado de
                                 trabalho.
@@ -613,11 +614,11 @@
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" id="faq-pergunta-4" aria-expanded="false" aria-controls="faq-resposta-4">
                             O material didático está incluso?
                             <span class="faq-icon">+</span>
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer" id="faq-resposta-4" role="region" aria-labelledby="faq-pergunta-4" aria-hidden="true">
                             <p>
                                 Sim. O aluno não paga pelo material didático, pois ele já está incluso no curso,
                                 garantindo mais praticidade e economia.
@@ -626,11 +627,11 @@
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" id="faq-pergunta-5" aria-expanded="false" aria-controls="faq-resposta-5">
                             Quais são as formas de pagamento?
                             <span class="faq-icon">+</span>
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer" id="faq-resposta-5" role="region" aria-labelledby="faq-pergunta-5" aria-hidden="true">
                             <p>
                                 Oferecemos pagamento facilitado através do carnê da Visual Ponto Com,
                                 tornando o acesso aos cursos mais simples e acessível.
@@ -640,11 +641,11 @@
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" id="faq-pergunta-6" aria-expanded="false" aria-controls="faq-resposta-6">
                             O aluno recebe certificado?
                             <span class="faq-icon">+</span>
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer" id="faq-resposta-6" role="region" aria-labelledby="faq-pergunta-6" aria-hidden="true">
                             <p>
                                 Sim. Ao concluir o curso, o aluno recebe certificado,
                                 que pode ser utilizado para comprovação de qualificação profissional.
@@ -653,18 +654,17 @@
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" id="faq-pergunta-7" aria-expanded="false" aria-controls="faq-resposta-7">
                             Posso estudar mesmo trabalhando?
                             <span class="faq-icon">+</span>
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer" id="faq-resposta-7" role="region" aria-labelledby="faq-pergunta-7" aria-hidden="true">
                             <p>
                                 Sim. Nossos cursos são pensados para se adaptar à rotina do aluno,
                                 permitindo conciliar estudos, trabalho e desenvolvimento profissional.
                             </p>
                         </div>
                     </div>
-                </div>
             </div>
     </section>
 
@@ -699,12 +699,13 @@
                                     <p><strong>Telefone:</strong> (27) 99731-5612</p>
                                     <p><strong>Telefone fixo:</strong> (27) 3396-0195</p>
 
-                                    <a href="https://wa.me/5527997315612" target="_blank" class="botao-whatsapp"
+                                    <a href="https://wa.me/5527997315612" target="_blank" rel="noopener noreferrer" class="botao-whatsapp"
                                         data-unidade="Cariacica">
                                         WhatsApp
                                     </a>
 
                                     <iframe
+                                        title="Mapa da unidade Visual Ponto Com em Cariacica" loading="lazy"
                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.01151231807!2d-40.38555062396244!3d-20.341143081141674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb83eacceaacbb1%3A0xb013e8cdb615739a!2sVisual%20Ponto%20Com!5e0!3m2!1spt-BR!2sbr!4v1775086191961!5m2!1spt-BR!2sbr"></iframe>
                                 </div>
                             </div>
@@ -722,12 +723,13 @@
                                     <p><strong>Telefone:</strong> (27) 99871-5135</p>
 
 
-                                    <a href="https://wa.me/5527998715135" target="_blank" class="botao-whatsapp"
+                                    <a href="https://wa.me/5527998715135" target="_blank" rel="noopener noreferrer" class="botao-whatsapp"
                                         data-unidade="Guarapari">
                                         WhatsApp
                                     </a>
 
                                     <iframe
+                                        title="Mapa da unidade Visual Ponto Com em Guarapari" loading="lazy"
                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.9589230943084!2d-40.5027968!3d-20.671250099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb857ef1c95aaaf%3A0x81a0b3843581e62a!2sVisual%20Ponto%20Com%2C%20Cursos%20de%20Inform%C3%A1tica%20e%20Profissionalizantes!5e0!3m2!1spt-BR!2sbr!4v1775086097652!5m2!1spt-BR!2sbr"></iframe>
                                 </div>
                             </div>
@@ -745,12 +747,13 @@
                                     <p><strong>Telefone:</strong> (27) 3066-6610</p>
 
 
-                                    <a href="https://wa.me/5527996485922" target="_blank" class="botao-whatsapp"
+                                    <a href="https://wa.me/5527996485922" target="_blank" rel="noopener noreferrer" class="botao-whatsapp"
                                         data-unidade="Serra">
                                         WhatsApp
                                     </a>
 
                                     <iframe
+                                        title="Mapa da unidade Visual Ponto Com em Serra" loading="lazy"
                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.419624144632!2d-40.25273312387863!3d-20.199876546770874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81ec109e15555%3A0x1fae2e4a1bd6ee27!2sVisual%20Ponto%20Com%2C%20Cursos%20de%20Inform%C3%A1tica%20e%20Profissionalizantes!5e0!3m2!1spt-BR!2sbr!4v1775086380877!5m2!1spt-BR!2sbr"></iframe>
                                 </div>
                             </div>
@@ -767,6 +770,7 @@
     <div id="ai-agent-container" class="ai-agent-area">
         <!-- O widget do agente de IA será inserido aqui -->
     </div>
+    </main>
 
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
@@ -774,20 +778,20 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <!-- EDITÁVEL: Nome do negócio -->
-                    <div class="footer-logo"> <a href="#inicio" class="logo"> <img class="logo-final"
-                                src="img/Logo-final.png"></a></div>
+                    <div class="footer-logo"> <a href="#inicio" class="logo" aria-label="Visual Ponto Com - início"> <img class="logo-final"
+                                src="img/Logo-final.png" alt="Visual Ponto Com" loading="lazy"></a></div>
                     <p>Transformando vidas através do ensino desde 1997.</p>
                     <div class="footer-social">
                         <a href="https://www.instagram.com/visualpontocomcursos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                            aria-label="Instagram"> <img class="logo-instagram" src="img/Logo-Instagram.png"></a>
+                            aria-label="Instagram"> <img class="logo-instagram" src="img/Logo-Instagram.png" alt="" loading="lazy"></a>
                         <a href="https://www.facebook.com/visual.comcursos" aria-label="Facebook"> <img
-                                src="img/Logo-Facebook.png"></a>
+                                src="img/Logo-Facebook.png" alt="" loading="lazy"></a>
 
 
                     </div>
                 </div>
                 <div class="footer-column">
-                    <h4>Cursos</h4>
+                    <h2>Cursos</h2>
                     <a href="#servicos">Informática Profissional</a>
                     <a href="#servicos">Pacote Office (Word, Excel e PowerPoint)</a>
                     <a href="#servicos">Designer Gráfico</a>
@@ -798,20 +802,14 @@
                     <a href="#servicos">Inteligência Artificial</a>
                 </div>
                 <div class="footer-column">
-                    <h4>Institucional</h4>
+                    <h2>Institucional</h2>
                     <a href="#sobre">Sobre Nós</a>
                     <a href="#destaques">Diferenciais</a>
                     <a href="#depoimentos">Depoimentos</a>
                     <a href="#faq">FAQ</a>
                     <a href="#contato">Contato</a>
                 </div>
-                <div class="footer-column">
-                    <h4></h4>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                </div>
+                <div class="footer-column" aria-hidden="true"></div>
             </div>
             <div class="footer-bottom">
                 <!-- EDITÁVEL: Copyright -->
@@ -824,7 +822,7 @@
     <!-- Política de Privacidade (texto simples no rodapé) -->
     <section class="privacidade" id="privacidade">
         <div class="container">
-            <h3>Política de Privacidade</h3>
+            <h2>Política de Privacidade</h2>
             <p>A Visual Ponto Com respeita sua privacidade. Os dados coletados são utilizados apenas para fins
                 educacionais e comunicação com alunos. Não compartilhamos informações pessoais com terceiros sem
                 consentimento prévio. Para mais informações, entre em contato conosco.</p>

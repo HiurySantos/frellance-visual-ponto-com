@@ -1,3 +1,5 @@
+const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
 const galeriasCompletas = {
     guarapari: [
         { tipo: "img", src: "img/Polo Guarapari/WhatsApp Image 2026-04-02 at 04.50.40.jpeg" },
@@ -63,16 +65,20 @@ function renderizarGaleria(idContainer, midias) {
     const container = document.getElementById(idContainer);
     if (!container) return;
 
+    const unidade = idContainer.replace('grid-', '');
+    const nomeUnidade = unidade.charAt(0).toUpperCase() + unidade.slice(1);
+
     midias.forEach((midia, index) => {
         if (midia.tipo === "img") {
             container.innerHTML += `
-                <img src="${midia.src}" alt="Foto ${index + 1}" loading="lazy">
+                <img src="${midia.src}" alt="Imagem ${index + 1} da unidade de ${nomeUnidade}" loading="lazy">
             `;
         }
 
         if (midia.tipo === "video") {
+            const autoplay = reducedMotionQuery.matches ? '' : 'autoplay';
             container.innerHTML += `
-        <video autoplay muted loop playsinline preload="none">
+        <video ${autoplay} muted loop playsinline preload="none" controls aria-label="Vídeo da unidade de ${nomeUnidade}">
             <source src="${midia.src}" type="video/mp4">
             Seu navegador não suporta vídeo.
         </video>
@@ -85,3 +91,19 @@ renderizarGaleria("grid-guarapari", galeriasCompletas.guarapari);
 renderizarGaleria("grid-serra", galeriasCompletas.serra);
 renderizarGaleria("grid-cariacica", galeriasCompletas.cariacica);
 renderizarGaleria("grid-vilavelha", galeriasCompletas.vilavelha);
+
+function handleReducedMotionChange(event) {
+    document.querySelectorAll('.galeria-grid video').forEach(video => {
+        if (event.matches) {
+            video.pause();
+        } else {
+            video.play().catch(() => {});
+        }
+    });
+}
+
+if (typeof reducedMotionQuery.addEventListener === 'function') {
+    reducedMotionQuery.addEventListener('change', handleReducedMotionChange);
+} else if (typeof reducedMotionQuery.addListener === 'function') {
+    reducedMotionQuery.addListener(handleReducedMotionChange);
+}
