@@ -7,7 +7,7 @@ Site institucional responsivo desenvolvido para a escola profissionalizante Visu
 
 ## Preview
 
-![Visualização responsiva do site Visual Ponto Com](img/Responsividade.png)
+![Visualização responsiva do site Visual Ponto Com](docs/visual-ponto-com-preview.webp)
 
 ## Sobre o projeto
 
@@ -57,12 +57,16 @@ O projeto não possui dependências ou etapa de compilação. Para executá-lo l
 ```text
 .
 ├── index.html
-├── style.css
-├── script.js
 ├── galeria.html
-├── galeria.css
-├── galeria.js
-└── img/
+├── assets/
+│   ├── css/
+│   ├── icons/
+│   ├── images/
+│   ├── js/
+│   └── videos/
+├── docs/
+├── robots.txt
+└── sitemap.xml
 ```
 
 ## Autor
