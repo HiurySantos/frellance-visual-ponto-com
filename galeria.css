@@ -24,6 +24,12 @@
     font-weight: 600;
 }
 
+.btn-voltar:focus-visible,
+.galeria-grid video:focus-visible {
+    outline: 3px solid #243c96;
+    outline-offset: 4px;
+}
+
 .pagina-galeria {
     padding: 60px 0;
     background: #f8f9fb;
